@@ -5,7 +5,7 @@
 
 /**
  *
- * @author lenovo
+ * @author CALAGOS
  */
 public class LoginMain {
 
