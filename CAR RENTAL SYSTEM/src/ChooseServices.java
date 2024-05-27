@@ -30,7 +30,6 @@ public class ChooseServices extends JFrame{
      lblCarRentalSystem.setFont(new Font("Arial", Font.BOLD, 25));
      
      
-     
      btnAvailableVehicle = new JButton("AVAILABLE VEHICLE");
      btnAvailableVehicle.setBounds(180,100, 200,40 );
      btnAvailableVehicle.setFont(new Font("Arial", Font.BOLD,15));
