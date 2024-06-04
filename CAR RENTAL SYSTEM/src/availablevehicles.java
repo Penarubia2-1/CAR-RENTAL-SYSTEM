@@ -13,17 +13,18 @@ import javax.swing.JLabel;
  *
  * @author John Mark Penarubia
  */
-public class availablevehicles extends JFrame {
-        public JLabel lblAvailableVehicle, lblTypes, lblChoose;  
-        public JButton btnMuscle,btnSUV,btnVan,btnHatchback,btnPickup;
-        public JFrame fr=new JFrame("Available Vehicle");
-
+public class availablevehicles extends JFrame  implements ActionListener{
+        private JLabel lblAvailableVehicle, lblTypes, lblChoose;  
+        private JButton btnMuscle,btnSUV,btnVan,btnHatchback,btnPickup;
+        
         
        availablevehicles(){
-       fr.setSize(500,500);
-       fr.getContentPane().setBackground(Color.gray);
-       fr.setDefaultCloseOperation(EXIT_ON_CLOSE);
-       
+                   setTitle("Avaible Page");
+
+       setSize(500,500);
+       getContentPane().setBackground(Color.gray);
+       setDefaultCloseOperation(EXIT_ON_CLOSE);
+       setLayout(null);
        
        lblAvailableVehicle=new JLabel("AVAILABLE TYPES OF VEHICLE");
        lblAvailableVehicle.setBounds(110,20,300,30);
@@ -62,28 +63,57 @@ public class availablevehicles extends JFrame {
        btnPickup.setBounds(142,325,160,50);
        btnPickup.setBackground(Color.BLACK);
        btnPickup.setForeground(Color.WHITE);
-
+      
+       
        
 
        //f.add
-       fr.add(lblAvailableVehicle);
-       fr.add(lblTypes);
-       fr.add(btnMuscle);
-       fr.add(btnSUV);
-       fr.add(btnVan);
-       fr.add(btnHatchback);
-       fr.add(btnPickup);
-       //f.set
-       fr.setLayout(null);
-       fr.setVisible(true);
-           fr.setResizable(false);
+       add(lblAvailableVehicle);
+       add(lblTypes);
+       add(btnMuscle);
+       add(btnSUV);
+       add(btnVan);
+       add(btnHatchback);
+       add(btnPickup);
 
- 
-   
+        btnMuscle.addActionListener(this);
+        btnSUV.addActionListener(this);
+        btnVan.addActionListener(this);
+        btnHatchback.addActionListener(this);
+        btnPickup.addActionListener(this);
    }
 
-public  void actionPerformed(ActionEvent e){
-    
+    /**
+     *
+     * @param e
+     */
+    @Override
+        public  void actionPerformed(ActionEvent e){
+       dispose();
+       if (e.getSource()==btnMuscle){
+           MuscleCar mc=new MuscleCar();
+           mc.setVisible(true);
+       }
+       if (e.getSource()==btnSUV){
+           SUVCar sv= new SUVCar();
+           sv.setVisible(true);
+        }
+       else if (e.getSource()==btnVan){
+           VanCar vc= new VanCar();
+           vc.setVisible(true);
+         }
+       else if (e.getSource()==btnHatchback){
+           HatchbackCar hc= new HatchbackCar();
+           hc.setVisible(true);
+        }
+      else if (e.getSource()==btnPickup){
+           PickupCar pc= new PickupCar();
+           pc.setVisible(true);
+           
+           
+       }
+        
+        
 }
 
 }

@@ -25,17 +25,16 @@ import javax.swing.JTextField;
  * @author penarubia
  */
 
-public class SUVCar implements ActionListener{
+public class SUVCar extends JFrame implements ActionListener{
      private JLabel lblSUVCar,lblCherttiggo,lblMustang, lblRover, lblGeely,lblWagon,lblPrice,lblJetour, lblSuzukiJimny, lblKia,lblFoton,lblHyundai;
-     private JFrame fr=new JFrame("SUV Car");
      private JTextField txtfldChoose= new JTextField();
-     private JButton btnnext,btnadd,btndelete,btnadd1,btndelete1,btnadd2,btndelete2,btnadd3,btndelete3,btnadd4,btndelete4,btnback;
-     
+     private JLabel lblCarID,lblCarID006,lblCarID007,lblCarID008,lblCarID009,lblCarID010;
+     private JButton btnnext,btnback;
      SUVCar(){
-
-     fr.setSize(550,400);
-     fr.setLayout(null);
-     fr.setDefaultCloseOperation(fr.EXIT_ON_CLOSE);
+         setTitle("SUV Car");
+         setSize(600,400);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
      lblSUVCar=new JLabel("List of Available SUV Car");
      lblSUVCar.setBounds(180,20,280,30);
@@ -88,98 +87,73 @@ public class SUVCar implements ActionListener{
     lblGeely.setFont(new Font("Arial", Font.PLAIN, 15));
 
     //buttons
-    btnadd = new JButton("ADD");
-    btnadd.setBounds(184, 196, 60, 20);
-    btnadd.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd.addActionListener(this);
+     lblCarID = new JLabel("CAR ID");
+    lblCarID.setBounds(173, 49, 80, 20);
+    lblCarID.setFont(new Font("Arial Black", Font.BOLD, 15));
     
-    btndelete = new JButton("DELETE");
-    btndelete.setBounds(105, 196, 70, 20);
-    btndelete.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete.addActionListener(this);
+      
+    lblCarID006 = new JLabel("006");
+    lblCarID006.setBounds(190, 75, 60, 20);
+    lblCarID006.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    btnadd1 = new JButton("ADD");
-    btnadd1.setBounds(184, 76, 60, 20);
-    btnadd1.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd1.addActionListener(this);
+    lblCarID007 = new JLabel("007");
+    lblCarID007.setBounds(190, 105, 70, 20);
+    lblCarID007.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    btndelete1 = new JButton("DELETE");
-    btndelete1.setBounds(105, 76, 70, 20);
-    btndelete1.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete1.addActionListener(this);
+    lblCarID008 = new JLabel("008");
+    lblCarID008.setBounds(190, 135, 60, 20);
+    lblCarID008.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-     
-    btnadd2 = new JButton("ADD");
-    btnadd2.setBounds(184, 106, 60, 20);
-    btnadd2.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd2.addActionListener(this);
+    lblCarID009 = new JLabel("009");
+    lblCarID009.setBounds(190, 165, 70, 20);
+    lblCarID009.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    btndelete2 = new JButton("DELETE");
-    btndelete2.setBounds(105, 106, 70, 20);
-    btndelete2.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete2.addActionListener(this);
-
-    btnadd3 = new JButton("ADD");
-    btnadd3.setBounds(184, 136, 60, 20);
-    btnadd3.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd3.addActionListener(this);
-
-    btndelete3 = new JButton("DELETE");
-    btndelete3.setBounds(105, 136, 70, 20);
-    btndelete3.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete3.addActionListener(this);
-    
-    btnadd4 = new JButton("ADD");
-    btnadd4.setBounds(184, 166, 60, 20);
-    btnadd4.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd4.addActionListener(this);
-    
-    btndelete4 = new JButton("DELETE");
-    btndelete4.setBounds(105, 166, 70, 20);
-    btndelete4.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete4.addActionListener(this);
+    lblCarID010 = new JLabel("010");
+    lblCarID010.setBounds(190, 195, 60, 20);
+    lblCarID010.setFont(new Font("Arial Black", Font.BOLD, 13));
     
     btnback = new JButton("BACK");
-    btnback.setBounds(130, 240, 100, 30);
+    btnback.setBounds(180, 245, 100, 30);
     btnback.setFont(new Font("Arial", Font.BOLD, 15));
     btnback.addActionListener(this);
     
     btnnext = new JButton("NEXT");
-    btnnext.setBounds(260, 240, 100, 30);
+    btnnext.setBounds(310, 245, 100, 30);
     btnnext.setFont(new Font("Arial", Font.BOLD, 15));
     btnnext.addActionListener(this);
     
     //add
-    fr.add(lblSUVCar);
-    fr.add(lblCherttiggo);
-    fr.add(lblMustang);
-    fr.add(lblRover);
-    fr.add(lblHyundai);
-    fr.add(lblWagon);
-    fr.add(lblPrice);
-    fr.add(lblJetour);
-    fr.add(lblSuzukiJimny);
-    fr.add(lblKia);
-    fr.add(lblFoton);
-    fr.add(lblGeely);
-    fr.add(btnnext);
-    fr.add(btnadd);
-    fr.add(btndelete);
-    fr.add(btnadd1);
-    fr.add(btndelete1);
-    fr.add(btnadd2);
-    fr.add(btndelete2);
-    fr.add(btnadd3);
-    fr.add(btndelete3);
-    fr.add(btnadd4);
-    fr.add(btndelete4);
-    fr.add(btnback);
+    add(lblSUVCar);
+    add(lblCherttiggo);
+    add(lblMustang);
+    add(lblRover);
+    add(lblHyundai);
+    add(lblWagon);
+    add(lblPrice);
+    add(lblJetour);
+    add(lblSuzukiJimny);
+    add(lblKia);
+    add(lblFoton);
+    add(lblGeely);
+    add(lblCarID);
+    add(lblCarID006);
+    add(lblCarID007);
+    add(lblCarID008);
+    add(lblCarID009);
+    add(lblCarID010);
+    add(btnnext);
+    add(btnback);
     
-    fr.setVisible(true);
-    fr.setResizable(false);
+    setVisible(true);
 }
      @Override
      public void actionPerformed(ActionEvent e){
+           dispose ();
+    if(e.getSource() == btnback){
+            availablevehicles av = new availablevehicles();
+            av.setVisible(true);
 }
+
+     }
 }
  

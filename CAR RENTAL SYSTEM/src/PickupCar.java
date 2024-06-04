@@ -14,17 +14,15 @@ import javax.swing.JTextField;
  * @author John Mark Penarubia
  */
 
-public class PickupCar implements ActionListener{
+public class PickupCar extends JFrame implements ActionListener{
      private JLabel lblAvailablePickup, lblRanger, lblToyota, lblIsuzuD,lblNavarra,lblfoton,lblPrice,lblPRanger,lblPToyota, lblPIsuzuD,lblPNavarra,lblPfoton;
-     private JFrame fr=new JFrame("Pickup Car");
-     private JTextField txtfldChoose= new JTextField();
-     private JButton btnadd,btndelete,btnadd1,btndelete1,btnadd2,btndelete2,btnadd3,btndelete3,btnadd4,btndelete4,btnnext,btnback;
-     
+      private JLabel lblCarID,lblCarID021,lblCarID022,lblCarID023,lblCarID024,lblCarID025;
+     private JButton btnback, btnnext;
      PickupCar(){
 
-     fr.setSize(550,350);
-     fr.setLayout(null);
-     fr.setDefaultCloseOperation(fr.EXIT_ON_CLOSE);
+        setSize(550,350);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
     lblAvailablePickup=new JLabel("List of Available Pickup Car");
     lblAvailablePickup.setBounds(180,20,280,30);
@@ -54,7 +52,7 @@ public class PickupCar implements ActionListener{
     //pricelist
     lblPrice=new JLabel("Price");
     lblPrice.setBounds(353,42,200,30);
-    lblPrice.setFont(new Font("Arial", Font.PLAIN,15));
+    lblPrice.setFont(new Font("Arial", Font.BOLD,15));
     
     lblPRanger = new JLabel("10,000");
     lblPRanger.setBounds(350, 60, 180, 30);
@@ -72,67 +70,34 @@ public class PickupCar implements ActionListener{
     lblPNavarra.setBounds(350, 150, 190, 30);
     lblPNavarra.setFont(new Font("Arial", Font.PLAIN, 15));
     
-    
     lblPfoton = new JLabel("10,000");
     lblPfoton.setBounds(350, 180, 180, 30);
     lblPfoton.setFont(new Font("Arial", Font.PLAIN, 15));
-     
     
+    lblCarID = new JLabel("CAR ID");
+    lblCarID.setBounds(145, 46, 80, 20);
+    lblCarID.setFont(new Font("Arial Black", Font.BOLD, 15));
     
+    lblCarID021 = new JLabel("021");
+    lblCarID021.setBounds(167, 65, 60, 20);
+    lblCarID021.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    //buttons
-    btnadd = new JButton("ADD");
-    btnadd.setBounds(143, 67, 60, 20);
-    btnadd.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd.addActionListener(this);
+    lblCarID022 = new JLabel("022");
+    lblCarID022.setBounds(167, 95, 70, 20);
+    lblCarID022.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    btndelete = new JButton("DELETE");
-    btndelete.setBounds(65, 67, 70, 20);
-    btndelete.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete.addActionListener(this);
-
+    lblCarID023 = new JLabel("023");
+    lblCarID023.setBounds(167, 125, 60, 20);
+    lblCarID023.setFont(new Font("Arial Black", Font.BOLD, 13));
     
-    btnadd1 = new JButton("ADD");
-    btnadd1.setBounds(143, 97, 60, 20);
-    btnadd1.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd1.addActionListener(this);
-    
-    btndelete1 = new JButton("DELETE");
-    btndelete1.setBounds(65, 97, 70, 20);
-    btndelete1.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete1.addActionListener(this);
-    
-     
-    btnadd2 = new JButton("ADD");
-    btnadd2.setBounds(143, 127, 60, 20);
-    btnadd2.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd2.addActionListener(this);
-    
-    btndelete2 = new JButton("DELETE");
-    btndelete2.setBounds(65, 127, 70, 20);
-    btndelete2.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete2.addActionListener(this);
-
-    btnadd3 = new JButton("ADD");
-    btnadd3.setBounds(143, 157, 60, 20);
-    btnadd3.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd3.addActionListener(this);
-
-    btndelete3 = new JButton("DELETE");
-    btndelete3.setBounds(65, 157, 70, 20);
-    btndelete3.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete3.addActionListener(this);
-    
-    btnadd4 = new JButton("ADD");
-    btnadd4.setBounds(143, 187, 60, 20);
-    btnadd4.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btnadd4.addActionListener(this);
-    
-    btndelete4 = new JButton("DELETE");
-    btndelete4.setBounds(65, 187, 70, 20);
-    btndelete4.setFont(new Font("Arial Black", Font.BOLD, 8));
-    btndelete4.addActionListener(this);
+    lblCarID024 = new JLabel("024");
+    lblCarID024.setBounds(167, 155, 70, 20);
+    lblCarID024.setFont(new Font("Arial Black", Font.BOLD, 13));
    
+    lblCarID025 = new JLabel("025");
+    lblCarID025.setBounds(167, 185, 60, 20);
+    lblCarID025.setFont(new Font("Arial Black", Font.BOLD, 13));
+    
     btnback = new JButton("BACK");
     btnback.setBounds(170, 220, 100, 30);
     btnback.setFont(new Font("Arial", Font.BOLD, 15));
@@ -145,36 +110,37 @@ public class PickupCar implements ActionListener{
    
     
     //add
-    fr.add(lblAvailablePickup);
-    fr.add(lblRanger);
-    fr.add(lblToyota);
-    fr.add(lblIsuzuD);
-    fr.add(lblNavarra);
-    fr.add(lblfoton);
-    fr.add(lblPrice);
-    fr.add(lblPRanger);
-    fr.add(lblPToyota);
-    fr.add(lblPIsuzuD);
-    fr.add(lblPNavarra);
-    fr.add(lblPfoton);
-    fr.add(btnnext);
-    fr.add(btnadd);
-    fr.add(btndelete);
-    fr.add(btnadd1);
-    fr.add(btndelete1);
-    fr.add(btnadd2);
-    fr.add(btndelete2);
-    fr.add(btnadd3);
-    fr.add(btndelete3);
-    fr.add(btnadd4);
-    fr.add(btndelete4);
-    fr.add(btnnext);
-    fr.add(btnback);
+    add(lblAvailablePickup);
+    add(lblRanger);
+    add(lblToyota);
+    add(lblIsuzuD);
+    add(lblNavarra);
+    add(lblfoton);
+    add(lblPrice);
+    add(lblPRanger);
+    add(lblPToyota);
+    add(lblPIsuzuD);
+    add(lblPNavarra);
+    add(lblPfoton);
+    add(lblCarID);
+    add(lblCarID021);
+    add(lblCarID022);
+    add(lblCarID023);
+    add(lblCarID024);
+    add(lblCarID025);
+    add(btnnext);
+    add(btnback);
     
-    fr.setVisible(true);
-    fr.setResizable(false);
-}
+     } 
      @Override
      public void actionPerformed(ActionEvent e){
+         dispose ();
+            if(e.getSource() == btnback){
+            availablevehicles av = new availablevehicles();
+            av.setVisible(true);
+            }
+         
+     }
 }
-}
+
+   
