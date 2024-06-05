@@ -144,4 +144,9 @@ public class MuscleCar extends JFrame implements ActionListener{
             av.setVisible(true);
         
     }
+    else if(e.getSource() == btnnext){
+            GenerateInvoices gi = new GenerateInvoices();
+            gi.setVisible(true);
+        
+    }
      }}

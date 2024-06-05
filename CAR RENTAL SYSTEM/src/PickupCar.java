@@ -139,7 +139,11 @@ public class PickupCar extends JFrame implements ActionListener{
             availablevehicles av = new availablevehicles();
             av.setVisible(true);
             }
-         
+             else if(e.getSource() == btnnext){
+            GenerateInvoices gi = new GenerateInvoices();
+            gi.setVisible(true);
+        
+    }
      }
 }
 

@@ -6,6 +6,8 @@
  */
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -14,16 +16,16 @@ import javax.swing.JPanel;
  *
  * @author jurie imperial
  */
-public class ChooseServices extends JFrame{
-    private JFrame frame = new JFrame("Homepage");
+public class ChooseServices  extends JFrame implements ActionListener{
     private JLabel lblCarRentalSystem;
     private JButton btnAvailableVehicle,btnReservation,btnOtherservices,btnback;
    
     
     ChooseServices(){
-     frame.setSize(600,500);
-     frame.setLayout(null);
-     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Services We Offer");
+        setSize(600,500);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
      lblCarRentalSystem = new JLabel("CAR RENTAL SYSTEM");
      lblCarRentalSystem.setBounds(150,50,300,30);
@@ -47,39 +49,38 @@ public class ChooseServices extends JFrame{
      btnback.setFont(new Font("Arial", Font.BOLD,15));
      
      
-    
+        btnAvailableVehicle.addActionListener(this);
+        btnReservation.addActionListener(this);
+        btnOtherservices.addActionListener(this);
+        btnback.addActionListener(this);
      
      
-     frame.add(btnOtherservices);
-     frame.add(lblCarRentalSystem);
-     frame.add(btnAvailableVehicle);
-     frame.add(btnReservation);
-     frame.add(btnback);
+     add(btnOtherservices);
+     add(lblCarRentalSystem);
+     add(btnAvailableVehicle);
+     add(btnReservation);
+     add(btnback);
      
-     frame.setVisible(true);
-     frame.setResizable(false);
+    }
+    @Override
+   public void actionPerformed(ActionEvent e){
+       dispose();
+       if (e.getSource()==btnAvailableVehicle){
+           availablevehicles av=new availablevehicles();
+           av.setVisible(true);
+       }
         
-        
-        
-     
-     
-     
-     
-     
-     
-     
-     
-     
- 
-        
-        
-        } 
- 
- 
- 
- 
- 
-    
-    
-    
+   }
 }
+        
+     
+     
+     
+     
+     
+     
+     
+     
+     
+ 
+        
