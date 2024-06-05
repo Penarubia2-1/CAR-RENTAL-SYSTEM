@@ -9,9 +9,10 @@ import java.awt.event.*;
 /**
  *
  * @author Marfil
+ * 
  */
 
-public class GenerateInvoices implements ActionListener{
+public class GenerateInvoices extends JFrame implements ActionListener{
   private JFrame f= new JFrame("Generate Rental Invoices"); 
   private JLabel lblcstmrName,lblVehicleModel,lblBaseCostPerDay,lblAdditionalCost,lblRentalDays;
   private JTextField txtfldName=new JTextField();
@@ -102,7 +103,5 @@ public class GenerateInvoices implements ActionListener{
       
   }
 
-    void setVisible(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
 }

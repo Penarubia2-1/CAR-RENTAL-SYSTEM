@@ -11,7 +11,7 @@ import javax.swing.*;
  *
  * @author Daiichi Magno
  */
-public class BookingReservation implements ActionListener {
+public class BookingReservation  extends JFrame implements ActionListener {
     
      private JFrame f = new JFrame("Reservation");
     private JLabel lblVehicleModel, lbldays, lblAddress,lblContactnumber;

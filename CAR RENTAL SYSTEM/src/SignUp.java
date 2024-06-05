@@ -14,7 +14,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 
-public class SignUp implements  ActionListener {
+public class SignUp  extends JFrame implements  ActionListener {
     private JFrame frame = new JFrame("SignUp");
     private JLabel lblSignUp,lblEmail,lblAge,lblPhone,lblAddress,lblPostalcode,lblConfirmPassword,lblPassword;
     
