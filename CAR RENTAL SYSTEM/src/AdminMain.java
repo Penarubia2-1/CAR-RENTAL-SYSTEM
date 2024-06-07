@@ -8,9 +8,9 @@ import java.awt.EventQueue;
 
 /**
  *
- * @author  IMPERIAL JURIE
+ * @author lenovo
  */
-public class ClientAdminMain {
+public class AdminMain {
 
     /**
      * @param args the command line arguments
@@ -20,11 +20,11 @@ public class ClientAdminMain {
           EventQueue.invokeLater(new Runnable() {
               @Override
               public void run() {
-                  ClientAdmin ca=new ClientAdmin();
-                  ca.setVisible(true);
-              }
+                  Admin ad=new Admin();
+                  ad.setVisible(true);
+                  
+                  }
 
     });
     }
-    
 }

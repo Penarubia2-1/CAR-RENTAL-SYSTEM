@@ -19,8 +19,7 @@ public class availablevehicles extends JFrame  implements ActionListener{
         
         
        availablevehicles(){
-                   setTitle("Avaible Page");
-
+       setTitle("Avaible Page");
        setSize(500,500);
        getContentPane().setBackground(Color.gray);
        setDefaultCloseOperation(EXIT_ON_CLOSE);
