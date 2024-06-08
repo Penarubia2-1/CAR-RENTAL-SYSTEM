@@ -6,8 +6,10 @@
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,6 +19,7 @@ import javax.swing.JLabel;
  * @author IMPERIAL JURIE
  */
 public class ClientAdmin extends JFrame implements ActionListener  {
+    private JLabel label = new JLabel();
     private JLabel lblYouAreA = new JLabel();
     private JButton btnClient,btnAdmin;
     private JLabel lbltitle;
@@ -27,8 +30,9 @@ public class ClientAdmin extends JFrame implements ActionListener  {
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.black);
-
-
+        
+        label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\gboyc\\Documents\\NetBeansProjects\\CAR-RENTAL-SYSTEM\\TrackingAvailableVehicle\\CAR-RENTAL-SYSTEM\\CAR RENTAL SYSTEM\\src\\myimg.png").getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH)));
+        
         lbltitle = new JLabel("WELCOME TO OUR CAR RENTAL SYSTEM ");
         lbltitle.setBounds(50, 90, 450,20);
         lbltitle.setFont(new Font("Arial", Font.BOLD,15));
@@ -52,7 +56,8 @@ public class ClientAdmin extends JFrame implements ActionListener  {
         btnAdmin.setFont(new Font("Arial", Font.BOLD,20));
         btnAdmin.setForeground(Color.black);
      
-     
+
+        add(label);
         add(lbltitle);
         add(lblYouAreA);
         add(btnClient);

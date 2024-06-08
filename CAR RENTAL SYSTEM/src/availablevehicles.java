@@ -1,9 +1,9 @@
-import java.awt.Color;
-import java.awt.Font;
+
+import java.awt.*;
 import java.awt.event.*;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,6 +14,7 @@ import javax.swing.JLabel;
  * @author John Mark Penarubia
  */
 public class availablevehicles extends JFrame  implements ActionListener{
+            private JLabel label = new JLabel();
         private JLabel lblAvailableVehicle, lblTypes, lblChoose;  
         private JButton btnMuscle,btnSUV,btnVan,btnHatchback,btnPickup,btnback;
         
@@ -24,6 +25,9 @@ public class availablevehicles extends JFrame  implements ActionListener{
        getContentPane().setBackground(Color.gray);
        setDefaultCloseOperation(EXIT_ON_CLOSE);
        setLayout(null);
+       
+        label.setIcon(new ImageIcon(new ImageIcon("\"C:\\Users\\gboyc\\Documents\\NetBeansProjects\\Car Rental System\\image\\rent.jpg\"").getImage().getScaledInstance(500, 400, Image.SCALE_SMOOTH)));
+
        
        lblAvailableVehicle=new JLabel("AVAILABLE TYPES OF VEHICLE");
        lblAvailableVehicle.setBounds(110,20,300,30);
@@ -77,6 +81,7 @@ public class availablevehicles extends JFrame  implements ActionListener{
        add(btnHatchback);
        add(btnPickup);
        add(btnback);
+       add(label);
 
        btnMuscle.addActionListener(this);
        btnSUV.addActionListener(this);
@@ -86,10 +91,7 @@ public class availablevehicles extends JFrame  implements ActionListener{
        btnback.addActionListener(this);
    }
 
-    /**
-     *
-     * @param e
-     */
+  
     @Override
         public  void actionPerformed(ActionEvent e){
        dispose();
