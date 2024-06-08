@@ -31,7 +31,7 @@ public class ClientAdmin extends JFrame implements ActionListener  {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.black);
         
-        label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\gboyc\\Documents\\NetBeansProjects\\CAR-RENTAL-SYSTEM\\TrackingAvailableVehicle\\CAR-RENTAL-SYSTEM\\CAR RENTAL SYSTEM\\src\\myimg.png").getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH)));
+        label.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\gboyc\\Documents\\NetBeansProjects\\CAR-RENTAL-SYSTEM\\TrackingAvailableVehicle\\CAR-RENTAL-SYSTEM\\CAR RENTAL SYSTEM\\src\\myimg.png").getImage().getScaledInstance(300, 400, Image.SCALE_SMOOTH)));
         
         lbltitle = new JLabel("WELCOME TO OUR CAR RENTAL SYSTEM ");
         lbltitle.setBounds(50, 90, 450,20);

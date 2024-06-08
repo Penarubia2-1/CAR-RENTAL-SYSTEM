@@ -17,6 +17,7 @@ public class ClientAdminMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
           EventQueue.invokeLater(new Runnable() {
               @Override
               public void run() {
